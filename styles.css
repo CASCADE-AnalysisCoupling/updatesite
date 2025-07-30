@@ -14,8 +14,8 @@
      line-height: 1.4;
      background-color: #f4f4f9;
      color: #333;
-     padding-left: 16;
-     padding-right: 16;
+     padding-left: 16px;
+     padding-right: 16px;
  }
 
  footer {
@@ -23,7 +23,6 @@
      bottom: 0;
      left: 0;
      width: calc(100% - 32px);
-     /* Adjust width to account for 16px margins on both sides */
      background-color: #333;
      color: #fff;
      text-align: center;
