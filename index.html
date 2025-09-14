@@ -8,19 +8,29 @@
 <header>
     <h1>CASCADE - Analysis Coupling Updatesite</h1>
 </header>
- 
-<body> 
+
+<body>
     Paste the following link into the eclipse install-dialog: <code>https://cascade-analysiscoupling.github.io/updatesite/release</code>
     <h2>Downloadable Artifacts</h2>
     <div>
-        <h3>Sourcecode Analysis Execution</h3>
+            <h3>Framework</h3>
+            <p style="margin-left: 16px;">
+                <ul>
+                    <li><p><b>Architecture-And-StaticCode-Analyses-CouplingFramework (<a href="https://github.com/CASCADE-AnalysisCoupling/Architecture-And-StaticCode-Analyses-CouplingFramework">&rarr;GitHub Page</a>)</b><br/>Provides a framework for executing a static analysis in 5 Steps: ALIGNMENT, COMPLETION, ANALYSIS, RESOLUTION, and INTEGRATION in this prescribed order.</p></li>
+                    <li><p><b>Partitioner (<a href="https://github.com/CASCADE-AnalysisCoupling/Partitioner">&rarr;GitHub Page</a>)</b><br/>This Project provides a standalone Partitioner interface for the iterative Analysis Framework. The abstract concept of Partitioning of iterable Sets is extracted to achieve dependency inversion.<br>It is important that all Implementations of the interface Partitioner are registered in the @JsonSubTypes annotation in the interface file above the interface definition. This is neccessary for deserialization from JSON to the correct Subclass.</li>
+                </ul>
+            </p>
+
+    </div>
+    <div>
+        <h3>Sourcecode Analysis Execution (<a href="https://github.com/CASCADE-AnalysisCoupling/TSE_Reiche_TransformationsAndModels">&rarr;GitHub Page</a>)</h3>
         <p style="margin-left: 16px;">
             <ul>
-                <li>JOANA-Execution</li>
-                <li>CodeQL-Execution</li>
+                <li><b>JOANA-Execution</b></li>
+                <li><b>CodeQL-Execution</b></li>
             </ul>
         </p>
-        
+
     </div>
 
 </body>
