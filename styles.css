@@ -50,10 +50,8 @@ header p {
     margin: 0 auto;
 }
 
-.install-card,
-.artifacts-card,
-.framework-card,
-.sourcecode-card {
+
+.card {
     background-color: var(--surface-color);
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
@@ -62,10 +60,9 @@ header p {
     border: 2px solid var(--secondary-color);
 }
 
-.install-card h2,
-.artifacts-card h2,
-.framework-card h3,
-.sourcecode-card h3 {
+
+.card h2,
+.card h3 {
     color: var(--primary-color);
     margin-bottom: 1rem;
     font-weight: 500;    
@@ -157,10 +154,7 @@ footer {
         align-items: stretch;
     }
     
-    .install-card,
-    .artifacts-card,
-    .framework-card,
-    .sourcecode-card {
+    .card {
         padding: 1rem;
     }
 }

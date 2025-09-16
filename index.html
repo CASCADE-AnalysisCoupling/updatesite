@@ -9,7 +9,7 @@
         <p>Analysis Coupling Updatesite</p>
     </header>
     <main class="container">
-        <section class="install-card">
+        <section class="card">
             <h2>Install</h2>
             <p>Paste the following link into the Eclipse install dialog:</p>
             <div class="install-link-container">
@@ -17,9 +17,9 @@
                 <button class="copy-button" onclick="copyToClipboard()">Copy</button>
             </div>
         </section>
-        <section class="artifacts-card">
+        <section class="card">
             <h2>Included Artefacts</h2>
-            <div class="framework-card">
+            <div class="card">
                 <h3>Framework</h3>
                 <div class="artifact-item">
                     <h4>Architecture-And-StaticCode-Analyses-CouplingFramework</h4>
@@ -33,7 +33,7 @@
                     <p><strong>Note:</strong> All implementations of the Partitioner interface must be registered in the <code>@JsonSubTypes</code> annotation in the interface file above the interface definition. This is necessary for deserialization from JSON to the correct subclass.</p>
                 </div>
             </div>
-            <div class="sourcecode-card">
+            <div class="card">
                 <h3>Sourcecode Analysis Execution</h3>
                 <div class="artifact-item">
                     <h4>JOANA-Execution</h4>
@@ -42,6 +42,25 @@
                 <div class="artifact-item">
                     <h4>CodeQL-Execution</h4>
                     <a href="https://github.com/CASCADE-AnalysisCoupling/TSE_Reiche_TransformationsAndModels/tree/main/bundles/Non-Conformance-Analysis/edu.kit.kastel.sdq.coupling.sourcecodeanalysis.codeqlexecution" class="github-link">&rarr; GitHub</a>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Transformations</h3>
+                <div class="artifact-item">
+                    <h4>Access-Analysis to CodeQL</h4>
+                    
+                </div>
+                <div class="artifact-item">
+                    <h4>Access-Analysis to JOANA</h4>
+                    
+                </div>
+                <div class="artifact-item">
+                    <h4>CodeQL to Access-Analysis</h4>
+                    
+                </div>
+                <div class="artifact-item">
+                    <h4>JOANA to Access-Analysis</h4>
+                    
                 </div>
             </div>
         </section>
