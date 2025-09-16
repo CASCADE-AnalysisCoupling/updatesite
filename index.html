@@ -1,42 +1,62 @@
-<!DOCTYPE html>
-<html>
-
-<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CASCADE - Analysis Coupling Updatesite</title>    
     <link rel="stylesheet" href="styles.css">
-</head>
-<title>CASCADE - Analysis Coupling</title>
-<header>
-    <h1>CASCADE - Analysis Coupling Updatesite</h1>
-</header>
 
-<body>
-    Paste the following link into the eclipse install-dialog: <code>https://cascade-analysiscoupling.github.io/updatesite/release</code>
-    <h2>Downloadable Artifacts</h2>
-    <div>
-            <h3>Framework</h3>
-            <p style="margin-left: 16px;">
-                <ul>
-                    <li><p><b>Architecture-And-StaticCode-Analyses-CouplingFramework (<a href="https://github.com/CASCADE-AnalysisCoupling/Architecture-And-StaticCode-Analyses-CouplingFramework">&rarr;GitHub Page</a>)</b><br/>Provides a framework for executing a static analysis in 5 Steps: ALIGNMENT, COMPLETION, ANALYSIS, RESOLUTION, and INTEGRATION in this prescribed order.</p></li>
-                    <li><p><b>Partitioner (<a href="https://github.com/CASCADE-AnalysisCoupling/Partitioner">&rarr;GitHub Page</a>)</b><br/>This Project provides a standalone Partitioner interface for the iterative Analysis Framework. The abstract concept of Partitioning of iterable Sets is extracted to achieve dependency inversion.<br>It is important that all Implementations of the interface Partitioner are registered in the @JsonSubTypes annotation in the interface file above the interface definition. This is neccessary for deserialization from JSON to the correct Subclass.</li>
-                </ul>
-            </p>
 
-    </div>
-    <div>
-        <h3>Sourcecode Analysis Execution (<a href="https://github.com/CASCADE-AnalysisCoupling/TSE_Reiche_TransformationsAndModels">&rarr;GitHub Page</a>)</h3>
-        <p style="margin-left: 16px;">
-            <ul>
-                <li><b>JOANA-Execution</b></li>
-                <li><b>CodeQL-Execution</b></li>
-            </ul>
-        </p>
-
-    </div>
-
-</body>
-
-<footer>
-    <p>(add footer text here)</p>
-</footer>
-
-</html>
+    <header>
+        <h1>CASCADE</h1>
+        <p>Analysis Coupling Updatesite</p>
+    </header>
+    <main class="container">
+        <section class="install-card">
+            <h2>Install</h2>
+            <p>Paste the following link into the Eclipse install dialog:</p>
+            <div class="install-link-container">
+                <code id="install-link" class="install-link">https://cascade-analysiscoupling.github.io/updatesite/release</code>
+                <button class="copy-button" onclick="copyToClipboard()">Copy</button>
+            </div>
+        </section>
+        <section class="artifacts-card">
+            <h2>Included Artefacts</h2>
+            <div class="framework-card">
+                <h3>Framework</h3>
+                <div class="artifact-item">
+                    <h4>Architecture-And-StaticCode-Analyses-CouplingFramework</h4>
+                    <a href="https://github.com/CASCADE-AnalysisCoupling/Architecture-And-StaticCode-Analyses-CouplingFramework" class="github-link">&rarr; GitHub</a>
+                    <p>Provides a framework for executing a static analysis in 5 steps: ALIGNMENT, COMPLETION, ANALYSIS, RESOLUTION, and INTEGRATION in this prescribed order.</p>
+                </div>
+                <div class="artifact-item">
+                    <h4>Partitioner</h4>
+                    <a href="https://github.com/CASCADE-AnalysisCoupling/Partitioner" class="github-link">&rarr; GitHub</a>
+                    <p>This project provides a standalone Partitioner interface for the iterative Analysis Framework. The abstract concept of Partitioning of iterable Sets is extracted to achieve dependency inversion.</p>
+                    <p><strong>Note:</strong> All implementations of the Partitioner interface must be registered in the <code>@JsonSubTypes</code> annotation in the interface file above the interface definition. This is necessary for deserialization from JSON to the correct subclass.</p>
+                </div>
+            </div>
+            <div class="sourcecode-card">
+                <h3>Sourcecode Analysis Execution</h3>
+                <div class="artifact-item">
+                    <h4>JOANA-Execution</h4>
+                    <a href="https://github.com/CASCADE-AnalysisCoupling/TSE_Reiche_TransformationsAndModels/tree/main/bundles/Non-Conformance-Analysis/edu.kit.kastel.sdq.coupling.sourcecodeanalysis.joanaexecution" class="github-link">&rarr; GitHub</a>
+                </div>
+                <div class="artifact-item">
+                    <h4>CodeQL-Execution</h4>
+                    <a href="https://github.com/CASCADE-AnalysisCoupling/TSE_Reiche_TransformationsAndModels/tree/main/bundles/Non-Conformance-Analysis/edu.kit.kastel.sdq.coupling.sourcecodeanalysis.codeqlexecution" class="github-link">&rarr; GitHub</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p></p>
+    </footer>
+    <script>
+        function copyToClipboard() {
+            const link = document.getElementById('install-link');
+            navigator.clipboard.writeText(link.textContent).then(() => {
+                const button = document.querySelector('.copy-button');
+                const originalText = button.textContent;
+                button.textContent = 'Copied!';
+                setTimeout(() => { button.textContent = originalText; }, 2000);
+            }).catch(err => console.error('Copy failed:', err));
+        }
+   </script>

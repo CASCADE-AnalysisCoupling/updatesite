@@ -1,46 +1,166 @@
- header {
-     background-color: #2c3e50;
-     color: white;
-     padding: .5rem;
-     text-align: center;
-     margin-bottom: 32px;
-     margin-top: 0px;
-     border-bottom-left-radius: 20px;
-     border-bottom-right-radius: 20px;
- }
+:root {
+    --primary-color: #0d47a1;
+    --secondary-color: #2c3e50;
+    --background-color: #f5f5f5;
+    --surface-color: #ffffff;
+    --text-primary: #111111;
+    --text-secondary: #353535;
+    --border-radius: 10px;
+    --shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.05);
+}
 
- body {
-     font-family: Arial, Helvetica, sans-serif;
-     font-size: 14px;
-     line-height: 1.4;
-     background-color: #f4f4f9;
-     color: #333;
-     padding-left: 16px;
-     padding-right: 16px;
-     padding-top: 0px;
- }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
- footer {
-     position: fixed;
-     bottom: 0;
-     left: 0;
-     width: calc(100% - 32px);
-     background-color: #333;
-     color: #fff;
-     text-align: center;
-     margin-left: 16px;
-     margin-right: 16px;
-     border-top-left-radius: 20px;
-     border-top-right-radius: 20px;
- }
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    background-color: var(--background-color);
+    color: var(--text-primary);
+    padding: 16px;
+}
 
+header {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    margin-bottom: 2rem;
+}
 
- div {
-     border: solid;
-     border-color: #2c3e50;
-     border-width: 2px;
-     border-radius: 10px;
-     padding-left: 8px;
-     padding-right: 8px;
-     margin-bottom:16px;
- }
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.install-card,
+.artifacts-card,
+.framework-card,
+.sourcecode-card {
+    background-color: var(--surface-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border: 2px solid var(--secondary-color);
+}
+
+.install-card h2,
+.artifacts-card h2,
+.framework-card h3,
+.sourcecode-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-weight: 500;    
+}
+
+.install-link-container {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.install-link {
+    background-color: #222222;
+    color: white;
+    padding: 0.75rem;
+    border-radius: var(--border-radius);
+    flex: 1;
+    font-family: 'Courier New', monospace;
+    word-break: break-all;
+}
+
+.copy-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 14px 1rem;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.copy-button:hover {
+    background-color: #1565c0;
+}
+
+.artifact-item {
+    padding: 1rem 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.artifact-item:last-child {
+    border-bottom: none;
+}
+
+.artifact-item h4 {
+    
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.artifact-item p {
+    color: var(--text-secondary);
+    margin: 0.5rem 0;
+}
+
+.github-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.github-link:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 12px;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 8px;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .install-link-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .install-card,
+    .artifacts-card,
+    .framework-card,
+    .sourcecode-card {
+        padding: 1rem;
+    }
+}
